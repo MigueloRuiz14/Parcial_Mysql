@@ -14,7 +14,7 @@ namespace Parcial_Mysql
 {
     public partial class Form1 : Form
     {
-        public string conexion_cadena = "Database=parcial;Data Source=localhost;User Id=grupo2;Password=grupo2";
+        public string conexion_cadena = "Database=misempleados;Data Source=localhost;User Id=admin;Password=admin";
         public string usuario_modificar;
         public Form1()
         {
@@ -132,9 +132,9 @@ namespace Parcial_Mysql
                 MySqlConnection conexion = new MySqlConnection(conexion_cadena);
                 MySqlDataAdapter da = new MySqlDataAdapter(consulta, conexion);
                 System.Data.DataSet ds = new System.Data.DataSet();
-                da.Fill(ds, "parcial");
+                da.Fill(ds, "misempleados");
                 dataGridView1.DataSource = ds;
-                dataGridView1.DataMember = "parcial";
+                dataGridView1.DataMember = "misempleados";
             }
             catch
             {
@@ -184,9 +184,9 @@ namespace Parcial_Mysql
                 MySqlConnection conexion = new MySqlConnection(conexion_cadena);
                 MySqlDataAdapter da = new MySqlDataAdapter(consulta, conexion);
                 System.Data.DataSet ds = new System.Data.DataSet();
-                da.Fill(ds, "parcial");
+                da.Fill(ds, "misempleados");
                 dataGridView1.DataSource = ds;
-                dataGridView1.DataMember = "parcial";
+                dataGridView1.DataMember = "misempleados";
 
             }
             catch (MySqlException)
@@ -257,9 +257,9 @@ namespace Parcial_Mysql
                 MySqlConnection conexion = new MySqlConnection(conexion_cadena);
                 MySqlDataAdapter da = new MySqlDataAdapter(consulta, conexion);
                 System.Data.DataSet ds = new System.Data.DataSet();
-                da.Fill(ds, "parcial");
+                da.Fill(ds, "misempleados");
                 dataGridView1.DataSource = ds;
-                dataGridView1.DataMember = "parcial";
+                dataGridView1.DataMember = "misempleados";
             }
             catch (MySqlException)
             {
@@ -298,10 +298,10 @@ namespace Parcial_Mysql
 
                 System.Data.DataSet ds = new System.Data.DataSet();
 
-                comand.Fill(ds, "parcial");
+                comand.Fill(ds, "misempleados");
 
                 dataGridView1.DataSource = ds;
-                dataGridView1.DataMember = "parcial";
+                dataGridView1.DataMember = "misempleados";
 
                 MySqlConnection myConnetion = new MySqlConnection(conexion_cadena);
                 string myInsertQuery = "select * from empleados where idempleado = " + textBox10.Text + "";
@@ -368,9 +368,9 @@ namespace Parcial_Mysql
                 MySqlConnection conexion = new MySqlConnection(conexion_cadena);
                 MySqlDataAdapter comando = new MySqlDataAdapter(consulta, conexion);
                 System.Data.DataSet ds = new System.Data.DataSet();
-                comando.Fill(ds, "parcial");
+                comando.Fill(ds, "misempleados");
                 dataGridView1.DataSource = ds;
-                dataGridView1.DataMember = "parcial";
+                dataGridView1.DataMember = "misempleados";
             }
             catch
             {
